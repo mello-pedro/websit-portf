@@ -7,14 +7,14 @@
     --accent-color: #58a6ff;
     --accent-hover: #3182ce;
     --accent-glow: rgba(88, 166, 255, 0.4);
-    
+
     /* Glassmorphism card bg */
     --glass-bg: rgba(22, 27, 34, 0.6);
     --glass-border: rgba(48, 54, 61, 0.8);
-    
+
     /* Typography */
     --font-main: 'Inter', sans-serif;
-    
+
     /* Utilities */
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
@@ -48,7 +48,8 @@ body {
     z-index: 9999;
     mix-blend-mode: screen;
     transition: width 0.2s, height 0.2s;
-    opacity: 0; /* Updated dynamically via JS */
+    opacity: 0;
+    /* Updated dynamically via JS */
 }
 
 body:hover #cursor-glow {
@@ -56,7 +57,10 @@ body:hover #cursor-glow {
 }
 
 /* Typography styles */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     color: #ffffff;
     font-weight: 600;
 }
@@ -244,15 +248,19 @@ a:hover {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 50px;
     padding-top: 80px;
     position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .hero-content {
     flex: 1;
-    max-width: 600px;
+    max-width: 500px;
     z-index: 2;
+    padding-left: 20px;
 }
 
 .greeting {
@@ -280,7 +288,9 @@ a:hover {
 }
 
 @keyframes blink {
-    50% { opacity: 0; }
+    50% {
+        opacity: 0;
+    }
 }
 
 .hero-description {
@@ -356,8 +366,15 @@ a:hover {
 }
 
 @keyframes pulse {
-    0% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
-    100% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.8; }
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 0.8;
+    }
 }
 
 /* About Section */
@@ -376,16 +393,17 @@ a:hover {
 .about-skills {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    column-gap: 30px;
+    row-gap: 5px;
 }
 
 .skill-group h3 {
     font-size: 1.1rem;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     color: #fff;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
 
 .skill-group h3 i {
@@ -395,13 +413,13 @@ a:hover {
 .tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 5px;
 }
 
 .tags span {
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
-    padding: 5px 12px;
+    padding: 3px 8px;
     border-radius: 4px;
     font-size: 0.85rem;
     font-family: monospace;
@@ -413,7 +431,7 @@ a:hover {
 }
 
 .education-list li {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 .education-list strong {
@@ -576,6 +594,14 @@ a:hover {
     padding: 60px 40px;
 }
 
+.contact-container .section-title {
+    justify-content: center;
+}
+
+.contact-container .section-title::after {
+    display: none;
+}
+
 .contact-container p {
     margin-bottom: 40px;
     font-size: 1.1rem;
@@ -621,7 +647,7 @@ footer p {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-    
+
     .hero {
         flex-direction: column-reverse;
         justify-content: center;
@@ -644,7 +670,7 @@ footer p {
     .menu-btn {
         display: block;
     }
-    
+
     .nav-links {
         position: fixed;
         right: -100%;
@@ -658,7 +684,7 @@ footer p {
         transition: right 0.3s ease;
         border-left: 1px solid var(--glass-border);
     }
-    
+
     .nav-links.active {
         right: 0;
     }
