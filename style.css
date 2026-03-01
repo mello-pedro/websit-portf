@@ -236,6 +236,28 @@ a:hover {
     background: var(--accent-glow);
 }
 
+.lang-toggle {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-left: 10px;
+    user-select: none;
+}
+
+.lang-btn {
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.lang-btn:hover {
+    color: var(--text-primary);
+}
+
+.lang-btn.active {
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
 .menu-btn {
     display: none;
     cursor: pointer;
