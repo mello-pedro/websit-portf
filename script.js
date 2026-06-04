@@ -149,6 +149,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (btnPt && btnEn) {
         btnPt.addEventListener('click', () => setLanguage('pt'));
         btnEn.addEventListener('click', () => setLanguage('en'));
+        // Set English as the default language on load
+        setLanguage('en');
     }
 
     // --- Dynamic Year ---
